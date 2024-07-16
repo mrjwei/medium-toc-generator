@@ -5,6 +5,7 @@ Table-of-contents generator for [Medium](https://medium.com/).
 
 - Building TOCs with one click
 - Generating TOCs in bulk for multiple blog posts
+- Supporting up to 2 levels of lists
 - User-friendly GUI & even non-programmers can set up and get go in minutes
 - Opening browser tabs containing rendered, ready-for-copying TOCs, one tab for a TOC
 

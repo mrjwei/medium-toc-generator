@@ -103,7 +103,7 @@ class TOCGenerator(Frame):
 
   def generate_toc(self):
     try:
-      for i, entry in enumerate(self.url_entries):
+      for entry in self.url_entries:
         url = entry.get()
         if not url:
           continue
@@ -144,7 +144,14 @@ class TOCGenerator(Frame):
         ''')
 
         Path("outputs").mkdir(parents=True, exist_ok=True)
-        file_name = f'outputs/output_{i+1}.html'
+        file_name = f'outputs/output.html'
+        i = 1
+        while True:
+          if Path(file_name).exists():
+            file_name = f'outputs/output_{i}.html'
+            i += 1
+          else:
+            break
 
         with open(file_name, 'w', encoding='utf-8') as f:
           f.write(template.render(context))
